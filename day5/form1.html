@@ -1,103 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Form</title>
-   
+    <title>University Form</title>
 </head>
+
 <body>
-     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #3c1d1d;
-        }
-        form {
-            width: 400px;
-            background-color: #fff7f7;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(173, 83, 83, 0.1);
-        }
-        fieldset {
-            border: 1px solid rgb(0, 0, 0);
-            padding: 10px;
-            margin: 0;
-        }
-        legend {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        textarea,
-        input[type="date"] {
-            width: calc(100% - 20px);
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .gender-group {
-            margin-bottom: 10px;
-        }
-        .gender-group label {
-            display: inline-block;
-            margin-left: 10px;
-        }
-        input[type="radio"] {
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-        input[type="submit"] {
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer
-        }
-    </style>
+    <h1>University Registration Form</h1>
+    <p>please fill the form below.</p>
+    <hr>
+
+
     <form>
-        <fieldset>
-            <legend>User Personal Information</legend>
-            <label for="name">Enter your full name:</label>
-            <input type="text" id="name" name="name" required />
+        <h1>Personal Details</h1>
+        <label for="name">First Name</label>
+        <input type="text" name="name" id="name" placeholder="eg: john">
+        <br><br>
 
-            <label for="email">Enter your email:</label>
-            <input type="email" id="email" name="email" required />
+        <label for="last-name">Last Name</label>
+        <input type="text" name="last-name" id="last name">
+        <br><br>
+        
+        <label for="dob">DOB</label>
+        <input type="date" name="dob" id="dob">
+        <br><br>
+        
+        <h3>gender</h3>
+        <input type="radio" id="male" name="Gender" value="male">
+        <label for="male">male</label>
+        <br>
+        <input type="radio" id="female" name="Gender" value="female">
+        <label for="female">female</label>
+        <br>
+        <input type="radio" id="others" name="Gender" value="others">
+        <label for="others">Others</label>
+        <br><br>
 
-            <label for="password">Enter your password:</label>
-            <input type="password" id="password" name="pass" required />
-            
-            <label for="confirmPassword">Confirm your password:</label>
-            <input type="password" id="confirmPassword" name="confirmPass" required />
-            
-            <label>Enter your gender:</label>
-            <div class="gender-group">
-                <input type="radio" name="gender" value="male" id="male" required />
-                <label for="male">Male</label>
-                <input type="radio" name="gender" value="female" id="female" />
-                <label for="female">Female</label>
-                <input type="radio" name="gender" value="others" id="others" />
-                <label for="others">Others</label>
-            </div>
-            
-            <label for="dob">Enter your Date of Birth:</label>
-            <input type="date" id="dob" name="dob" required />
-            
-            <label for="address">Enter your Address:</label>
-            <textarea id="address" name="address" required></textarea>
-            
-            <input type="submit" value="Submit" />
-        </fieldset>
+        <label for="file">Upload your file</label>
+        <input type="file" id="file" name="file">
+
+        <hr>
+
+        <h2>contact info</h2>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required placeholder="abc@xyz.com">
+        <br><br>
+
+        <label for="phome">Phone no.</label>
+        <input type="tel" name="phone" id="phone" required>
+        <br><br>
+
+        <label for="address">Address</label> <br>
+        <textarea name="mailingAddress" id="address" rows="10" cols="30"></textarea>
+
+        <hr>
+
+        <h2>Academic Info</h2>
+
+        <label for="course"> Degree Course</label>
+        <select name="course" id="course">
+            <option value="mce">MCE</option>
+            <option value="cce">CCE</option>
+            <option value="cse">CSE</option>
+        </select>
+
+        <h3>Extracirricular activities</h3>
+        <input type="checkbox" name="interest" id="Sports" value="Sports">
+        <label for="Sports">Sports</label>
+        <br>
+        <input type="checkbox" name="interest" id="Music" value="Music">
+        <label for="Music">Music</label>
+        <br>
+        <input type="checkbox" name="interest" id="Technology" value="Technology">
+        <label for="Technology">Technology</label>
+        <br>
+        <input type="checkbox" name="interest" id="Volunteering" value="Volunteering">
+        <label for="Volunteering">Volunteering</label>
+
+        <hr>
+
+        <h2>create your account</h2>
+        <label for="pass">Create your password</label>
+        <input type="text" id="pass" name="Password">
+        <br><br>
+
+        <label for="secuQs">Choose Your security Question</label>
+        <select name="securityQuestions" id="secuQs">
+            <option value="pet name">petname</option>
+            <option value="gf name">gf Name</option>
+            <option value="dog">dog</option>
+            <option value="papa">papa</option>
+        </select><br><br>
+        <label for="ans">Answer</label>
+        <input type="text" name="secAns" id="ans"><br><br>
+
+
+        <!-- <input type="submit" name="" id=""> -->
+
+        <button type="submit">Registor now</button>
     </form>
+
+
+
 </body>
+
 </html>
